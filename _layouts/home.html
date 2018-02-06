@@ -103,10 +103,10 @@ published: true
 	      <h3 class="text-center">Host a Hackathon</h3>
 	      <div class="contact-form main-content-body">
                 <form id="contact-form"
-                      action="https://formspree.io/notify@holochain.org"
+                      action="https://formspree.io/hackathons@holo.host"
                       method="POST">
                   <input type="hidden" name="_subject" value="holochain.org website contact" />
-                  <input type="hidden" name="_next" value="https://holochain.org/thanks.html" />
+                  <input type="hidden" name="_next" value="{{site.url}}/thanks.html" />
   	          <div class="alert alert-success text-center" style="display: none">
 
     	            Thank you for your message, we'll respond as soon as possible.
@@ -138,8 +138,8 @@ published: true
 		    </button>
 		  </div>
 
-
-  		  <script>
+                  <!--
+  		  <script
 
   		   var onloadCallback = function() {
 		       if ( $('#recaptcha').length ) {
@@ -178,7 +178,7 @@ published: true
 			   });
 		       });
 		   });
-  		  </script>
+  		  </script> -->>
 		</form>
 
 	      </div>
