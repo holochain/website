@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="hackathon-container curve-mask light">
+  <div class="light" id="curve-hackathon">
+    <section class="curve-content-wrap">
+      <div class="curve-content">
+	<h2 class="text-center">{{ page.title }}, {{ page.location }}</h2>
+	<div class="column-hackathon column">
+	  <div class="hackathon-content">
+	    <h3 class="text-left">{{ page.date_text }}</h3>
+	    {{ page.content }}
+	  </div>
+	</div>
+	<div class="column-hackathon column">
+	  <div class="hackathon-content">
+	    <h3 class="text-left">Location</h3>
+	    <h4 class="text-left">{{ page.address }}
+	      <iframe src="//www.google.com/maps/embed/v1/place?q={{ page.address | url_encode }}&zoom=17&key=AIzaSyC8LLaisqCSjXPKS0Lkgp9_86FGiJOXpRU" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen="" ></iframe>
+	  </div>
+	</div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+ $('header').show();
+ $('header').addClass('hackathon-header');
+</script>
