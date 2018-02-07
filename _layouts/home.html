@@ -35,7 +35,7 @@ published: true
 		    {% if section.content_blocks.size > 2 %}
 		      <img class="fadeimg three-col" src="{{ content_block.image.url }}" />
 		    {% else %}
-		      {{ content_block.image | image_tag: 'class:img-responsive' }}
+                      <img class="img-responsive" src="{{ content_block.image.url }}" />
 		    {% endif %}
 		  {% endif %}
 		  {% unless content_block.content_layout == 'Image Fill' %}
