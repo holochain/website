@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<script>
+ $('header').show();
+</script>
+<div class="curve-mask light team-curve-mask">
+
+  <div class="curve-down dark">
+    <div class="curve-content-wrap team-curve-content-wrap">
+      <div class="curve-content">
+	<div class="team-intro">
+	  <h1 class="text-center">Team</h1>
+	  <p class="text-center">We are a community of passionate humans building a distributed cloud, owned and run by users like you and me.</p>
+	  <p class="text-center">Holo provides a way to unleash the enormous idle capacity in everyone’s computers. This gives us the power to build vibrant cloud hosting communities that will challenge how the Internet monopolies control our data and our interactions. Holo offers each of us the ability to participate by sharing, earning, and building the future of the web.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container team-container">
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "fitWidth": true, "gutter": 20 }'>
+    <div class="grid-sizer"></div>
+    {% assign members = site.team_members | sort: "order" %}
+    {% for team_member in members %}
+      <div class="grid-item">
+	<div class="grid-content">
+	  <p class="text-center"><img class="team-image text-center" src="{{ team_member.photo.url }}"/></p>
+	  <h3 class="text-center">{{ team_member.name }}</h4>
+	    <p class="text-center">{{ team_member.job_title }}</p>
+
+	    <p>
+              {% if team_member.linkedin  %}<a href="{{ team_member.linkedin }}"><i class="fa fa-linkedin"></i></a>{% endif %}
+              {% if team_member.twitter  %}<a href="https://twitter.com/{{ team_member.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
+              {% if team_member.facebook  %}<a href="{{ team_member.facebook }}"><i class="fa fa-facebook"></i></a>{% endif %}
+            </p>
+
+	</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

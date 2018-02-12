@@ -668,6 +668,43 @@ textarea {
 	margin-right: 10px;
 }
 
+
+.team-intro {
+  width: 50%;
+  margin: 0 auto; }
+
+.team-curve-mask {
+  margin-bottom: 80px; }
+
+.team-curve-content-wrap {
+  min-height: 50vh !important; }
+
+.team-container {
+  width: 80%;
+  margin: 0 auto; }
+
+.grid {
+  margin: 0 auto; }
+
+.grid-sizer {
+  width: 320px; }
+  @media (max-width: 768px) {
+    .grid-sizer {
+      width: 360px; } }
+
+.grid-content {
+  margin: 0 auto; }
+
+.team-image {
+  width: 200px; }
+
+.grid-item {
+  margin-bottom: 20px; }
+  .grid-item p {
+    text-align: center; }
+  .grid-item img {
+    border-radius: 50%; }
+
 //particle animation
 
 .wrap {

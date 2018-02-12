@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<script>
+ $('header').show();
+</script>
+<div class="curve-mask light team-curve-mask">
+
+  <div class="curve-down dark">
+    <div class="curve-content-wrap team-curve-content-wrap">
+      <div class="curve-content">
+	<div class="team-intro">
+	  <h1 class="text-center">Dev Team</h1>
+	  <p class="text-center"></p>
+	</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container team-container">
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "fitWidth": true, "gutter": 20 }'>
+    <div class="grid-sizer"></div>
+    {% assign members = site.team_members | sort: "order" %}
+    {% for team_member in members %}
+      {% if team_member.dev %}
+      <div class="grid-item">
+	<div class="grid-content">
+	  <p class="text-center"><img class="team-image text-center" src="{{ team_member.photo.url }}"/></p>
+	  <h3 class="text-center">{{ team_member.name }}</h4>
+	    <p class="text-center">{{ team_member.dev }}</p>
+
+	    <p>
+              {% if team_member.linkedin  %}<a href="{{ team_member.linkedin }}"><i class="fa fa-linkedin"></i></a>{% endif %}
+              {% if team_member.twitter  %}<a href="https://twitter.com/{{ team_member.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
+              {% if team_member.facebook  %}<a href="{{ team_member.facebook }}"><i class="fa fa-facebook"></i></a>{% endif %}
+            </p>
+
+	</div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
