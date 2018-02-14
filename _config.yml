@@ -22,7 +22,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: holochain
 github_username:  holochain
 
-exclude: [".#*"]
 # Build settings
 markdown: kramdown
 #theme: minima
@@ -39,11 +38,12 @@ collections:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - ".#*"
