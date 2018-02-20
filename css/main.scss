@@ -17,6 +17,10 @@ $base-hue: 150;
 @mixin for-phone-landscape-only {
   @media (min-width: 320px) and (max-width: 599px) { @content; }
 }
+@mixin for-weird-breakpoint {
+  // To eleminate floating menu that breaks below the header
+  @media (min-width: 769px) and (max-width: 901px) { @content; }
+}
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) { @content; }
 }
@@ -43,6 +47,9 @@ $base-hue: 150;
 		@include for-phone-only {
 		display:none;
 	}
+    @include for-weird-breakpoint{
+    display:none;
+  }
 }
 
 
