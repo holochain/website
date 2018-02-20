@@ -1,10 +1,16 @@
 ---
 layout: default
 ---
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
  $('header').show();
+ // init Masonry
+ var $grid = $('.grid').masonry({ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "fitWidth": true, "gutter": 20});
+ // layout Masonry after each image loads
+ $grid.imagesLoaded().progress( function() {
+     $grid.masonry('layout');
+ });
 </script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <div class="curve-mask light team-curve-mask">
 
   <div class="curve-down dark">
