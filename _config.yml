@@ -16,11 +16,23 @@
 title: Holochain
 email: help@holo.host
 description: >- # this means to ignore newlines until "baseurl:"
-  Holochain site descriptionHolographic storage for distributed applications -- a validating monotonic DHT "backed" by authoritative hashchains for data provenance
+  Holographic storage for distributed applications -- a validating monotonic DHT "backed" by authoritative hashchains for data provenance
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://holochain.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: holochain
 github_username:  holochain
+logo: /assets/images/logo.png
+
+# Social Media Links
+social:
+  links:
+    - https://twitter.com/holochain
+    - https://facebook.com/holochain.design
+    - https://www.linkedin.com/company/holochain/
+    - https://plus.google.com/105745327146499117793
+    - https://github.com/holochain
+    - https://medium.com/holochain
+    - https://www.youtube.com/holochain
 
 # Build settings
 markdown: kramdown
