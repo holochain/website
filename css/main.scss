@@ -181,7 +181,8 @@ header {
 	padding-left:20px;
 
 	a {
-		margin-right: 30px;
+	  margin-right: 30px;
+          text-decoration: none;
 	}
 
 	img {
@@ -495,7 +496,6 @@ a.button {
     padding-left: 20px;
     padding-right: 20px;
     min-width: 300px;
-    height: 45px;
     margin: 7.5px;
     font-weight: light;
     letter-spacing: 2px;
@@ -630,7 +630,8 @@ textarea {
 }
 
 .button-hackathon {
-	width: 100%;
+  width: 100%;
+  font-size: 77%;
 }
 
 .column-hackathon {

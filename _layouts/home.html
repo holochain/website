@@ -96,7 +96,7 @@ published: true
 	      <h3 class="text-center">Upcoming Hackathons</h3>
           {% assign hackathons = site.hackathons | sort: "date" %}
 	      {% for hackathon in hackathons %}
-		<p class="text-center"><button class="button-hackathon"><a href="{{ hackathon.url }}">{{ hackathon.location }}, {{ hackathon.date_txt }}</a></button></p>
+		<p class="text-center"><a class="button button-hackathon" href="{{ hackathon.url }}">{{ hackathon.location }}, {{ hackathon.date_txt }}</a></button></p>
 	      {% endfor %}
 	    </div>
 	  </div>
