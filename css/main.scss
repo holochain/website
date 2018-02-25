@@ -163,7 +163,8 @@ li {
     background-repeat: no-repeat;
     background-position: 0px 5px;
     line-height: 30px;
-    text-indent: 30px;
+    text-indent: 0px;
+    padding-left: 30px;
     background-size: 20px, 20px;
     font-size: 20px;
     @include for-phone-only {
