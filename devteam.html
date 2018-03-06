@@ -18,7 +18,7 @@ layout: default
   </div>
 
 </div>
-<div id="team" class="container team-container">
+<div id="team" class="container team-container" style="display:none">
     {% assign members = site.team_members | sort: "order" %}
     {% for team_member in members %}
       {% if team_member.dev %}
@@ -78,4 +78,5 @@ layout: default
      "screen and (min-width: 20em) and (max-width: 40em)": { columns: 3 },
      "screen and (min-width: 40em)": { columns: 4 },
  });
+ $("#team").show();
 </script>
