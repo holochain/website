@@ -231,6 +231,7 @@ header {
 }
 
 footer {
+  clear: both;
 	margin-top: 70px;
 	height: 80px;
 	line-height: 80px;
@@ -317,6 +318,12 @@ $icons: url('/assets/images/list_icon_1.png'),
     }
 }
 
+/* grid for savvior */
+.column { float: left; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.33333%; }
+.size-1of4 { width: 25%; }
+
 /* Section Options */
 
 .light {
@@ -334,7 +341,7 @@ $icons: url('/assets/images/list_icon_1.png'),
 	color: white;
 }
 
-.column {
+.columnx {
 	float: left;
 	@include for-phone-only { width: 100% !important; }
 }
@@ -725,7 +732,9 @@ textarea {
 	margin-right: 10px;
 }
 
-
+#team {
+  margin: 0 10%;
+}
 .team-intro {
   width: 50%;
   margin: 0 auto; }
@@ -735,10 +744,6 @@ textarea {
 
 .team-curve-content-wrap {
   min-height: 50vh !important; }
-
-.team-container {
-  width: 80%;
-  margin: 0 auto; }
 
 .grid {
   margin: 0 auto; }
@@ -750,16 +755,19 @@ textarea {
       width: 360px; } }
 
 .grid-content {
-  margin: 0 auto; }
+  margin: 10px; }
 
 .team-image {
+  padding: 10px;
   width: 200px; }
 
 .grid-item {
   margin-bottom: 20px; }
-  .grid-item p {
+
+.grid-item p {
     text-align: center; }
-  .grid-item img {
+
+.grid-item img {
     border-radius: 50%; }
 
 //particle animation
