@@ -43,7 +43,7 @@ plugins:
 collections:
   sections:
   team_members:
-  hackathons:
+  events:
       output: true
 
 
