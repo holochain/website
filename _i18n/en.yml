@@ -23,17 +23,17 @@ body:
   acutally_p2p: Data is sharded across a network of full peers. No centralized servers, ledgers, or different user classes.
   agent_centric: Rigorously ethical, lossless approach to data integrity and context-specific provenance.
   human_internet: |-
-    <p> <b>Each of us wants to have control over how and with whom we interact. In order to evolve and thrive, our communities must support everyone's uniqueness. Yet today, our online relationships are dominated by centralized corporate web sites.</b></p>
-    <p><b>Holochain enables a distributed web with user autonomy built directly into its architecture and protocols. Data is about remembering our lived and shared experiences. Distributing the storage and processing of that data can change how we coordinate and interact. With digital integration under user control, Holochain liberates our online lives from corporate control over our choices and information.</b>
-    </p>
-    <p>
-    <a class="button" href="https://github.com/metacurrency/holochain/blob/whitepaper/holochain.pdf" title="Link: https://github.com/metacurrency/holochain/blob/whitepaper/holochain.pdf">Whitepaper</a></p>
+      <p> <b>Each of us wants to have control over how and with whom we interact. In order to evolve and thrive, our communities must support everyone's uniqueness. Yet today, our online relationships are dominated by centralized corporate web sites.</b></p>
+      <p><b>Holochain enables a distributed web with user autonomy built directly into its architecture and protocols. Data is about remembering our lived and shared experiences. Distributing the storage and processing of that data can change how we coordinate and interact. With digital integration under user control, Holochain liberates our online lives from corporate control over our choices and information.</b>
+      </p>
+      <p>
+      <a class="button" href="https://github.com/Holochain/holochain-proto/blob/whitepaper/holochain.pdf">Whitepaper</a></p>
   meets_demands_of:  |-
     <ul><li><b>Own their own data</b></li><b> </b><li><b>Control their identity</b></li><b>      </b><li><b>Choose how to connect their applications</b></li><b> </b><li><b>Transact      without dependence on centralized systems</b></li><b> </b><li><b>Build lighter,      faster, less expensive applications</b></li></ul>
   useful_for: |-
     <ul><li><b>Governance, collaboration, and organizational tools</b></li><li><b>Social      networks, social media, and vendor relationship management</b></li><li><b>Platform      cooperatives and sharing economy  apps</b></li><li><b>Supply chain solutions      and community resource management</b></li><li><b>Tokenless,  mutual-credit cryptocurrencies      and reputation systems</b></li></ul>
   buy_hot: |-
-    <h3>Buy HoloTokens (HOT) in Holo's Initial Community Offering.</h3><h3><a class="button"                href="https://holo.host/ico" title="https://holo.host/ico">Learn  More and&nbsp;Whitelist</a></h3><h3>HoloTokens are ERC20 tokens redeemable for Holo fuel when the ecosystem launches in 2018. Holo fuel is backed by a useful asset: distributed computing and hosting. Application providers will pay hosts in Holo fuel for serving crypto apps to legacy web browsers.</h3>
+    <h3>Buy HoloTokens (HOT) in Holo's Initial Community Offering.</h3><h3><a class="button"                href="https://holo.host/ico">Learn  More and&nbsp;Whitelist</a></h3><h3>HoloTokens are ERC20 tokens redeemable for Holo fuel when the ecosystem launches in 2018. Holo fuel is backed by a useful asset: distributed computing and hosting. Application providers will pay hosts in Holo fuel for serving crypto apps to legacy web browsers.</h3>
   distributed_apps: |-
     <p>Holochain applications are held entirely by the people who use them. No trusted third parties. No centralized points of failure. They enable direct communication and consent through architectures that minimize risk, reduce costs, and optimize for speed.</p>
     <p>Holochain apps each use a monotonic Distributed Hash Table (DHT) to share data and enforce validation rules on data published from a user's signed source chain. Each agent holds their own immutable hash chain and stores a portion of the app's public data as a node in the DHT. This makes powerful and secure decentralized computing possible on devices as lightweight as mobile phones.</p>
@@ -42,8 +42,8 @@ body:
     <p>The first entry of each agent's source chain contain the app's “DNA” -- the code that runs the app. This contains peer validation requirements ensuring that the application runs securely: that data cannot be counterfeited, tampered with, or lost.
     Eash app stores its data in a validating DHT creating redundancy of public data across randomized nodes. When nodes go offline, the DHT is self-healing and rebalances the data to different nodes. And if someone alters their own app code they effectively fork themselves out of the shared DHT space into an entirely different application.</p>
   holochain_release: |-
-    <p><b>Holochain is already in Alpha release. You can start building cutting edge distributed apps in JavaScript or Lisp today! Your apps will have access to core services like: a customizable UI, the Holochain DPKI app that manages keys and identities across holochain applications, the <a target="_blank" href="https://holo.host" title="Link: Holo home"><b>Holo</b></a> <b> platform for serving crypto apps to normal web browsers, API bridges between crypto apps, and the capacity to migrate data when updating distributed apps.</b></p>
-    <p><a class="button" target="_blank" href="https://github.com/metacurrency/holochain" title="https://github.com/metacurrency/holochain">GitHub</a>
-    <a class="button" target="_blank" href="https://github.com/metacurrency/holochain#installation"      title="https://github.com/metacurrency/holochain#installation">Installation</a>
-    <a class="button" rel="nofollow" target="_blank" href="https://chat.holochain.net/appsup/channels/town-square/" title="https://chat.holochain.net/appsup/channels/town-square/">Chat</a>
-    <a class="button" href="https://developer.holochain.net" title="https://developer.holochain.net">Resources</a></p>
+    <p><b>Holochain is already in Alpha release. You can start building cutting edge distributed apps in JavaScript or Lisp today! Your apps will have access to core services like: a customizable UI, the Holochain DPKI app that manages keys and identities across holochain applications, the <a target="_blank" href="https://holo.host"><b>Holo</b></a> <b> platform for serving crypto apps to normal web browsers, API bridges between crypto apps, and the capacity to migrate data when updating distributed apps.</b></p>
+    <p><a class="button" target="_blank" href="https://github.com/Holochain/holochain-proto">GitHub</a>
+    <a class="button" target="_blank" href="https://github.com/Holochain/holochain-proto#installation">Installation</a>
+    <a class="button" rel="nofollow" target="_blank" href="https://chat.holochain.net/appsup/channels/town-square/">Chat</a>
+    <a class="button" href="https://developer.holochain.net">Resources</a></p>

@@ -40,10 +40,11 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-multiple-languages-plugin
 collections:
   sections:
   team_members:
-  hackathons:
+  events:
       output: true
 
 #Language settings
