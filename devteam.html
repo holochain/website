@@ -1,11 +1,6 @@
 ---
 layout: default
 ---
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script>
- $('header').show();
-</script>
 <div class="curve-mask light team-curve-mask">
 
   <div class="curve-down dark">
@@ -20,14 +15,11 @@ layout: default
   </div>
 
 </div>
-<div class="container team-container">
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "fitWidth": true, "gutter": 20 }'>
-    <div class="grid-sizer"></div>
+<div id="team" class="container team-container" style="display:none">
     {% assign members = site.team_members | sort: "order" %}
     {% for team_member in members %}
       {% if team_member.dev %}
       <div class="grid-item">
-	<div class="grid-content">
 	  <p class="text-center"><img class="team-image text-center" src="{{ team_member.photo.url }}"/></p>
 	  <h3 class="text-center">{{ team_member.name }}</h4>
 	    <p class="text-center">{{ team_member.dev }}</p>
@@ -38,9 +30,51 @@ layout: default
               {% if team_member.facebook  %}<a href="{{ team_member.facebook }}"><i class="fa fa-facebook"></i></a>{% endif %}
             </p>
 
-	</div>
       </div>
       {% endif %}
     {% endfor %}
-  </div>
 </div>
+
+<div class="curve-mask light">
+<div class=" light" id="curve-2" style="background: url('/assets/images/holochain/whitepaper_section_backdrop.jpg');  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+  <section class="curve-content-wrap">
+    <div class="curve-content">
+
+      <h2>We're Hiring</h2>
+      If you're an experienced coder and interested in next-generation distibuted computing, we may be interested in you.
+      Blah blah.
+      <h3>What we're looking for:</h3>
+      <ul>
+        <li>Holochain Core: JavaScript and Go</li>
+        <li>Core Apps: DPKI, etc</li>
+        <li>UX/UI</li>
+        <li>Devops</li>
+        <li>Technical writing</li>
+      </ul>
+      <h3>Who we're looking for:</h3>
+      <ul>
+        <li>As a baseline, you are proficient with: git & test-driven development</li>
+        <li>You are comfortable with: Agile coding, scrum, pair-coding, Kan-ban boards, etc</li>
+        <li>You can handle straight talk, no dancing around egos, ...</li>
+      </ul>
+      <p> If this sound like fun to you, apply to <a class="text-left footer-link" href="https://docs.google.com/forms/d/e/1FAIpQLScU66pm9MV8TfWs9b9_p_rV-d4F66XesgiTvh87oVBSLSd7NQ/viewform"><strong>join our team</strong></a>!
+    </div>
+  </section>
+</div>
+</div>
+
+
+<!--[if IE 9]>
+  <script src="/assets/js/media-match.min.js"></script>
+<![endif]-->
+<script src="/assets/js/enquire.min.js"></script>
+<script src="/assets/js/savvior.min.js"></script>
+<script>
+  $('header').show();
+  savvior.init('#team', {
+     "screen and (max-width: 20em)": { columns: 2 },
+     "screen and (min-width: 20em) and (max-width: 40em)": { columns: 3 },
+     "screen and (min-width: 40em)": { columns: 4 },
+ });
+ $("#team").show();
+</script>
