@@ -39,6 +39,9 @@ $base-hue: 150;
 @mixin for-desktop-only {
   @media (min-width: 1200px) and (max-width: 1799px) { @content; }
 }
+@mixin for-most-desktops {
+  @media (min-width: 1200px) and (max-width: 1900px) { @content; }
+}
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
@@ -117,7 +120,9 @@ h3 {
 
 a {
 	color: rgb(102, 51, 255);
-	background: linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-moz-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-o-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-webkit-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
 	background-size: 600% 600%;
 	background-clip: text;
 	text-fill-color: transparent;
@@ -126,7 +131,9 @@ a {
 	font-family: arial;
 	font-weight: bold;
 	i  {
-		background: linear-gradient(240deg, #9900ff, #00ff99);
+    background: -moz-linear-gradient(240deg, #9900ff, #00ff99);
+    background: -o-linear-gradient(240deg, #9900ff, #00ff99);
+    background: -webkit-linear-gradient(240deg, #9900ff, #00ff99);
 		background-size: 600% 600%;
 		background-clip: text;
 		text-fill-color: transparent;
@@ -322,7 +329,12 @@ $icons: url('/assets/images/list_icon_1.png'),
 .column { float: left; }
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.33333%; }
-.size-1of4 { width: 25%; }
+.size-1of4 {
+  width: 28%;
+  @include for-most-desktops {
+    width: 25%;
+    }
+  }
 
 /* Section Options */
 
@@ -733,7 +745,10 @@ textarea {
 }
 
 #team {
-  margin: 0 10%;
+  margin: 0 5% 0 10%;
+  @include for-tablet-portait-only{
+    margin-right: 0%;
+  }
 }
 .team-intro {
   width: 50%;
@@ -758,17 +773,28 @@ textarea {
   margin: 10px; }
 
 .team-image {
-  padding: 10px;
+  // padding: 10px; moved to .grid-item fix IE padding issues w/ img
   width: 200px; }
 
 .grid-item {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding: 10px;}
 
 .grid-item p {
     text-align: center; }
 
 .grid-item img {
-    border-radius: 50%; }
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+ }
+
+
 
 //particle animation
 
