@@ -40,10 +40,10 @@ $base-hue: 150;
   @media (min-width: 1200px) and (max-width: 1799px) { @content; }
 }
 @mixin for-most-desktops {
-  @media (min-width: 1200px) and (max-width: 1900px) { @content; }
+  @media (min-width: 1200px) and (max-width: 1899px) { @content; }
 }
 @mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+  @media (min-width: 1900px) { @content; }
 }
 
 .no-mobile {
@@ -330,9 +330,9 @@ $icons: url('/assets/images/list_icon_1.png'),
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.33333%; }
 .size-1of4 {
-  width: 28%;
+  width: 25%;
   @include for-most-desktops {
-    width: 25%;
+    width: 22%;
     }
   }
 
