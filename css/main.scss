@@ -39,8 +39,11 @@ $base-hue: 150;
 @mixin for-desktop-only {
   @media (min-width: 1200px) and (max-width: 1799px) { @content; }
 }
+@mixin for-most-desktops {
+  @media (min-width: 1200px) and (max-width: 1899px) { @content; }
+}
 @mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+  @media (min-width: 1900px) { @content; }
 }
 
 .no-mobile {
@@ -56,8 +59,26 @@ $base-hue: 150;
 // Typography & basics
 
 @font-face {
-  font-family: 'AvenirLight';
+  font-family: 'AvenirUltraLight';
   src: url('/assets/fonts/avenir/AvenirNext-UltraLight.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('/assets/fonts/avenir/Avenir-Light.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/avenir/Avenir-Roman.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirMedium';
+  src: url('/assets/fonts/avenir/Avenir-Medium.woff');
   font-style: normal;
 }
 
@@ -66,7 +87,7 @@ body {
 }
 
 body, html, p {
-  font-family: 'AvenirLight', helvetica, sans-serif;
+  font-family: 'Avenir', helvetica, sans-serif;
   @include for-phone-only {
   	font-family: helvetica, sans-serif;
   	font-size: 10px;
@@ -117,7 +138,9 @@ h3 {
 
 a {
 	color: rgb(102, 51, 255);
-	background: linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-moz-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-o-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background:-webkit-linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
 	background-size: 600% 600%;
 	background-clip: text;
 	text-fill-color: transparent;
@@ -126,7 +149,9 @@ a {
 	font-family: arial;
 	font-weight: bold;
 	i  {
-		background: linear-gradient(240deg, #9900ff, #00ff99);
+    background: -moz-linear-gradient(240deg, #9900ff, #00ff99);
+    background: -o-linear-gradient(240deg, #9900ff, #00ff99);
+    background: -webkit-linear-gradient(240deg, #9900ff, #00ff99);
 		background-size: 600% 600%;
 		background-clip: text;
 		text-fill-color: transparent;
@@ -237,7 +262,7 @@ footer {
 	line-height: 80px;
 	font-size: 20px;
 	color: white;
-	background: #333;
+	background: #181818;
 
 	a {
 		text-decoration: none;
@@ -322,22 +347,27 @@ $icons: url('/assets/images/list_icon_1.png'),
 .column { float: left; }
 .size-1of2 { width: 50%; }
 .size-1of3 { width: 33.33333%; }
-.size-1of4 { width: 25%; }
+.size-1of4 {
+  width: 25%;
+  @include for-most-desktops {
+    width: 22%;
+    }
+  }
 
 /* Section Options */
 
 .light {
 	background-color: white;
-	color: #333;
+	color: #181818;
 }
 
 .medium {
 	background-color: #eee;
-	color: #333;
+	color: #181818;
 }
 
 .dark {
-    background-color: #333;
+    background-color: #181818;
 	color: white;
 }
 
@@ -497,7 +527,7 @@ $icons: url('/assets/images/list_icon_1.png'),
 
 a.button {
     position: relative;
-    border: 2px solid;
+    border: 2px solid white;
     border-radius: 60px;
     background: transparent;
     background-clip: padding-box;
@@ -505,7 +535,7 @@ a.button {
     padding-right: 20px;
     min-width: 300px;
     margin: 7.5px;
-    font-weight: light;
+    font-weight: normal;
     letter-spacing: 2px;
     background: -webkit-linear-gradient(left top, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
     background: -o-linear-gradient(bottom right, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
@@ -639,7 +669,7 @@ textarea {
 
 .button-hackathon {
   width: 100%;
-  font-size: 77%;
+  font-size: 90%;
 }
 
 .column-hackathon {
@@ -733,7 +763,10 @@ textarea {
 }
 
 #team {
-  margin: 0 10%;
+  margin: 0 5% 0 10%;
+  @include for-tablet-portait-only{
+    margin-right: 0%;
+  }
 }
 .team-intro {
   width: 50%;
@@ -758,17 +791,28 @@ textarea {
   margin: 10px; }
 
 .team-image {
-  padding: 10px;
+  // padding: 10px; moved to .grid-item fix IE padding issues w/ img
   width: 200px; }
 
 .grid-item {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding: 10px;}
 
 .grid-item p {
     text-align: center; }
 
 .grid-item img {
-    border-radius: 50%; }
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+ }
+
+
 
 //particle animation
 
