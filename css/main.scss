@@ -59,8 +59,26 @@ $base-hue: 150;
 // Typography & basics
 
 @font-face {
-  font-family: 'AvenirLight';
+  font-family: 'AvenirUltraLight';
   src: url('/assets/fonts/avenir/AvenirNext-UltraLight.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('/assets/fonts/avenir/Avenir-Light.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/avenir/Avenir-Roman.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirMedium';
+  src: url('/assets/fonts/avenir/Avenir-Medium.woff');
   font-style: normal;
 }
 
@@ -69,7 +87,7 @@ body {
 }
 
 body, html, p {
-  font-family: 'AvenirLight', helvetica, sans-serif;
+  font-family: 'Avenir', helvetica, sans-serif;
   @include for-phone-only {
   	font-family: helvetica, sans-serif;
   	font-size: 10px;
@@ -244,7 +262,7 @@ footer {
 	line-height: 80px;
 	font-size: 20px;
 	color: white;
-	background: #333;
+	background: #181818;
 
 	a {
 		text-decoration: none;
@@ -340,16 +358,16 @@ $icons: url('/assets/images/list_icon_1.png'),
 
 .light {
 	background-color: white;
-	color: #333;
+	color: #181818;
 }
 
 .medium {
 	background-color: #eee;
-	color: #333;
+	color: #181818;
 }
 
 .dark {
-    background-color: #333;
+    background-color: #181818;
 	color: white;
 }
 
@@ -509,7 +527,7 @@ $icons: url('/assets/images/list_icon_1.png'),
 
 a.button {
     position: relative;
-    border: 2px solid;
+    border: 2px solid white;
     border-radius: 60px;
     background: transparent;
     background-clip: padding-box;
@@ -517,7 +535,7 @@ a.button {
     padding-right: 20px;
     min-width: 300px;
     margin: 7.5px;
-    font-weight: light;
+    font-weight: normal;
     letter-spacing: 2px;
     background: -webkit-linear-gradient(left top, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
     background: -o-linear-gradient(bottom right, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
@@ -651,7 +669,7 @@ textarea {
 
 .button-hackathon {
   width: 100%;
-  font-size: 77%;
+  font-size: 90%;
 }
 
 .column-hackathon {
