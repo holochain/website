@@ -1,0 +1,48 @@
+langs:
+  en: English
+  es: Español
+
+titles:
+  totb: Piensa afuera de los bloques
+  scale_pb: Una post-blockchain escalable
+  p2p: Par-a-Par
+  agent_cc: Computación Centrada en el Agente
+  more_human: Un internet más humano
+  meets_demands: |-
+    Holochain satisface las demands de gente que quiere:
+  holochain_apps: |-
+    Las aplicaciones de Holochain son útiles para:
+  join: Unete a nuestra communidad! Participe en el ICO de Holo!
+  holographic_storage: Almacenamiento holográfico para aplicaciones distribuidas
+  low_cost: De bajo costo, ligero, seguro
+  start_building: Comienza a crear tus propias aplicaciones innovadoras
+
+body:
+  headliner: Computación y aplicaciones distribuidas
+  post_blockchain: Soluciones decentralizadas sin embotellamientos. Da versatilidad en estrategias publicas/privadas de validación
+  actually_p2p: Los datos son fragmentados a través de una red de pares completos. Sin servidores centralizados, sin libros de contabilidad, o diferentes usuarios de clases.
+  agent_centric: Una aproximación a la integridad de datos rigurosamente ética, sin perdidas, y de origen específico al contexto.
+  human_internet: |-
+    <p> Cada uno de nosotros quiere tener control sobre cómo y con quiénes interactuamos. Para evolucionar y prosperar, nuestras comunidades deben apoyar el aspecto único de todos. Sin embargo, hoy, nuestras relaciones online están dominadas por estructuras corporativas centralizadas.</p>
+    <p>Holochain hace realidad una web distribuida con autonomía de usuario construida directamente en su arquitectura y protocolos. Los datos tienen que ver con recordar nuestras experiencias vividas y compartidas. Distribuir el almacenamiento y el procesamiento de esos datos puede cambiar cómo coordinamos e interáctuamos. Con las conexiones digitales bajo el control del usuario, Holochain libera nuestras vidas online de la pérdida del poder sobre nuestra información.
+    </p>
+    <p>
+    <a class="button" href="https://github.com/Holochain/holochain-proto/blob/whitepaper/holochain.pdf">Whitepaper</a></p>
+  meets_demands_of:  |-
+    <ul><li>Tener sus propios datos</li> <li>Controlar su identidad</li>      <li>Escoger cómo conectar sus aplicaciones</li> <li>Escoger cómo conectar sus aplicaciones</li> <li>Crear aplicaciones más ligeras, más rápidas, y menos costosas</li></ul>
+  useful_for: |-
+    <ul><li>Herramientas para Gobernanza, Colaboración, y Organizaciones</li><li>Redes Sociales, Medios Sociales, y Manejo de Relaciones con el Vendedor</li><li>Cooperativas en Plataformas y Apps para la Economía Compartida</li><li>Soluciones de Cadena de Suministros y Manejo de Recursos de Comunidades</li><li>Cripto-monedas sin tokens, de crédito mutuo, y sistemas de reputación</li></ul>
+  distributed_apps: |-
+    <p>Las aplicaciones de Holochain son mantenidas enteramente por la gente que las usa. No hay terceros. No hay puntos de falla centralizados. Las aplicaciones habilitan comunicación directa y consentimiento a través del desarrollo de soluciones que minimizan el riesgo, reducen costos, y son optimizadas para tener velocidad.</p>
+    <p>Las aplicaciones de Holochain usan una Distributed Hash Table (DHT) monotónica para asegurar reglas de validación en datos publicados por el source chain firmado del usuario. Cada agente tiene su propia hash chain inmutable y hace un back up de la paleta de datos públicos de los apps como un nodo en el DHT. Esto hace que sea posible que haya computación descentralizada poderosa y segura en dispositivos tan ligeros como un teléfono celular.</p>
+  every_app: |-
+    <p>Cada aplicación ejecuta su propia holochain, en sus propios términos, sin la necesidad de costosos gastos generales. Dado a que los usuarios son los hosts, mientras que más agentes usen el app, más capacidad de almacenamiento se hace disponible.</p>
+    <p>El “DNA” del app comprende la primera entrada de la source chain del agente. Estas reglas establecen los requerimientos de validación, asegurando que la aplicación sea ejecutada seguramente: que los datos no pueda ser alterada o perdida. El DHT validante de la aplicación aleatoriza la redundancia de datos públicos a través de nodos en un espacio compartido. Cuando los nodos están offline, el DHT continua manteniendo los datos necesarios para que el app funcione. Y si alguien cambia las reglas del app se salen del DHT compartido hacia una aplicación completamente diferente.</p>
+  holochain_release: |-
+    <p>Holochain ya está en Alpha. ¡Puedes empezar a diseñar aplicaciones distribuidas de la próxima generación en Javascript o Lisp utilizando una net de prueba hoy! Las herramientas que crees serán congruentes con: UI customizable, el app DPKI de holochain que permite que las identidades crucen a través de membranas de aplicaciones, la plataforma <a target="_blank" href="https://holo.host">Holo</a>  para conectar con usuarios de la web centralizadas, y el potencial de combinar ambientes de aplicaciones con completa compatibilidad y sin perdida de datos. Estas capacidades están apoyadas por la capacidad dinámica de actualizar requerimientos de validación y reglas de validación, al igual que al ofrecer agentes una opción entre nuevas y viejas versiones.</p>
+    <p><a class="button" target="_blank" href="https://github.com/Holochain/holochain-proto">GitHub</a>
+    <a class="button" target="_blank" href="https://github.com/Holochain/holochain-proto#installation">Installation</a>
+    <a class="button" rel="nofollow" target="_blank" href="https://chat.holochain.net/appsup/channels/town-square/">Chat</a>
+    <a class="button" href="https://developer.holochain.net">Resources</a></p>
+
+team: Equipo

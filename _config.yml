@@ -40,12 +40,16 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-multiple-languages-plugin
 collections:
   sections:
   team_members:
   events:
       output: true
 
+#Language settings
+languages: ["en", "es"]
+exclude_from_localizations: ["assets", "css"]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

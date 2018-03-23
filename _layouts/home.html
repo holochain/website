@@ -26,7 +26,7 @@ published: true
 	      </style>
 	    {% endunless %}
 	    {% if section.show_title == true %}
-	      <h2 class="text-center">{{ section.title }}</h2>
+	      <h2 class="text-center">{% t section.titles %}</h2>
 	    {% endif %}
 	    {% for content_block in section.content_blocks %}
 	      <div class="column-{{ section._slug }} column {% if section.appearance == 'sixty-forty' %} {% cycle 'group 1': 'sixty', 'forty' %} {% elsif section.appearance == 'forty-sixty' %} {% cycle 'group 1': 'forty', 'sixty' %} {% endif %} ">
@@ -43,10 +43,10 @@ published: true
 		      <div class="gradient-parent">
 			<div class="gradient-box">
 		    {% endif %}
-		    {% capture title_size %}{{ content_block.title | size }}{% endcapture %}
+		    {% capture title_size %}{{ content_block.titles | size }}{% endcapture %}
 		    {% if content_block.show_text == true %}
-		      <{% if section.content_blocks.size > 2 %}h3{% else %}h2{% endif %}{% unless section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %} class="text-{{ content_block.text_align }}"{% endunless %}>{{ content_block.title }}</{% if section.content_blocks.size > 2 %}h3{% else %}h2{% endif %}>
-		      <p{% unless section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %} class="text-{{ content_block.text_align }}"{% endunless %}>{{ content_block.body }}</p>
+		      <{% if section.content_blocks.size > 2 %}h3{% else %}h2{% endif %}{% unless section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %} class="text-{{ content_block.text_align }}"{% endunless %}>{% t content_block.titles %}</{% if section.content_blocks.size > 2 %}h3{% else %}h2{% endif %}>
+		      <p{% unless section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %} class="text-{{ content_block.text_align }}"{% endunless %}>{% t content_block.body %}</p>
 		    {% endif %}
 		    {% if content_block.content_layout == 'Text over Image with Box' %}
 			</div>
@@ -61,7 +61,7 @@ published: true
 		<div class="column-content">
 		  {% if forloop.first %}
 		    <p class="text-center"> <img src="{{section.image.url}}" class="img-responsive"></p>
-		    <p class="text-center">{{ section.body }}</p>
+		    <h2 class="text-center">{% t section.body %}</h2>
 		    <div class="bounce-wrap">
 		      <img src="{{ '/assets/images/arrow.png' | theme_image_url }}" class="bounce" />
 		    </div>
@@ -73,8 +73,8 @@ published: true
 		    </div> -->
 
 		  {% else %}
-		    <h2 class="text-center">{{ section.title }}</h2>
-		    <p class="text-center">{{ section.content }}</p>
+		    <h2 class="text-center">{% t section.titles %}</h2>
+		    <p class="text-center">{% t section.content %}</p>
 		  {% endif %}
 		</div>
 	      </div>
