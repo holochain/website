@@ -9,7 +9,17 @@ published: true
   {% assign counter = 0 %}
   {% assign sections = site.sections | sort: "order" %}
   {% for section in sections  %}
-    <div class="curve-mask {% if section.appearance == 'curved' %}{% if forloop.last %}{{ section.colour_scheme }}{% else %}{{section.next.colour_scheme}}{% endif %}{% else %}{{ section.colour_scheme }}{% endif %}">
+    <div class="curve-mask
+    {% if section.appearance == 'curved' %}
+      {% if forloop.last %}
+        {{ section.colour_scheme }}
+      {% else %}
+        {% assign next = sections[forloop.index] %}
+        {{ next.colour_scheme }}
+      {% endif %}
+    {% else %}
+        {{ section.colour_scheme }}
+    {% endif %}">
       <div class="{% if section.appearance == 'curved' %}curve-down{% endif %} {{ section.colour_scheme }}" id="curve-{{ counter }}" {% if section.has_image == true %}style="background: url('{{ section.image.url }}'); {% unless section.appearance == 'curved' %} -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; {% else %} background-repeat: no-repeat; background-position: center 10%;{% endunless %}" {% endif %}>
 	<section class="{% if section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %}sixty-forty-wrap{% else %}curve-content-wrap{% endif %}">
 	  <div class="curve-content">
