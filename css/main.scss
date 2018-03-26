@@ -5,7 +5,7 @@
 $total: 300; // total particles
 $orb-size: 300px;
 $particle-size: 4px;
-$time: 14s; // for css effects
+$time: 30s; // for css effects
 $base-hue: 150;
 
 //breakpoints
@@ -205,6 +205,7 @@ header {
 	z-index: 9999;
 	display: none;
 	padding-left:20px;
+  box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.07);
 
 	a {
 	  margin-right: 30px;
@@ -432,12 +433,12 @@ $icons: url('/assets/images/list_icon_1.png'),
     background: linear-gradient(to bottom right, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
 	padding: 50px;
 	color: white;
-	background: linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+  background: linear-gradient(240deg, #9900ff,#8500ff,#6600ff,rgb(61,101,214),rgb(33,172,186),rgb(16,214,169),#0fe19f,rgb(16,214,169),rgb(33,172,186),rgb(61,101,214),#6600ff,#8500ff,#9900ff);
 	background-size: 600% 600%;
 
-	-webkit-animation: HoloFade $time ease infinite;
-	-moz-animation: HoloFade $time ease infinite;
-	animation: HoloFade $time ease infinite;
+	-webkit-animation: HoloFade $time linear infinite;
+	-moz-animation: HoloFade $time linear infinite;
+	animation: HoloFade $time linear infinite;
 
 	a {
 		color: white;
@@ -714,11 +715,19 @@ textarea {
 }
 
 .fadeimg {
-	background: linear-gradient(240deg, #9900ff, #6600ff, #00ff99);
+	background: linear-gradient(240deg, #9900ff,#8500ff,#6600ff,rgb(61,101,214),rgb(33,172,186),rgb(16,214,169),#0fe19f,rgb(16,214,169),rgb(33,172,186),rgb(61,101,214),#6600ff,#8500ff,#9900ff);
 	background-size: 600% 600%;
-	-webkit-animation: HoloFade $time ease infinite;
-	-moz-animation: HoloFade $time ease infinite;
-	animation: HoloFade $time ease infinite;
+	-webkit-animation: HoloFade $time linear infinite;
+	-moz-animation: HoloFade $time linear infinite;
+	animation: HoloFade $time linear infinite;
+}
+
+.fadelogo {
+	background: linear-gradient(240deg, #6600ff,#9900ff,#9900ff,#6600ff,rgb(33,172,186),#0fe19f,rgb(33,172,186),#6600ff,#9900ff,#9900ff,#6600ff);
+	background-size: 30% 200%;
+	-webkit-animation: HoloLogoFade $time linear infinite;
+	-moz-animation: HoloLogoFade $time linear infinite;
+	animation: HoloLogoFade $time linear infinite;
 }
 
 .three-col {
@@ -728,20 +737,37 @@ textarea {
 }
 
 @-webkit-keyframes HoloFade {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+    0%{background-position:0% 95%}
+    50%{background-position:35% 19%}
+    100%{background-position:0% 95%}
 }
 @-moz-keyframes HoloFade {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+    0%{background-position:0% 95%}
+    50%{background-position:35% 19%}
+    100%{background-position:0% 95%}
 }
 @keyframes HoloFade {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+    0%{background-position:0% 95%}
+    50%{background-position:35% 19%}
+    100%{background-position:0% 95%}
 }
+
+@-webkit-keyframes HoloLogoFade {
+    0%{background-position:0% 0%}
+    50%{background-position:50% 0%}
+    100%{background-position:100% 0%}
+}
+@-moz-keyframes HoloLogoFade {
+    0%{background-position:0% 0%}
+    50%{background-position:50% 0%}
+    100%{background-position:100% 0%}
+}
+@keyframes HoloLogoFade {
+    0%{background-position:0% 0%}
+    50%{background-position:50% 0%}
+    100%{background-position:100% 0%}
+}
+
 
 .gradient-box button {
 	border: 2px solid white;
