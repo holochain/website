@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	max-width: 80%;
 	font-size: 70px;
-	margin: 50px auto;
+	margin: 36px auto;
 	@include for-phone-only {
 		font-size: 18px;
 		margin: 20px auto;
@@ -786,6 +786,10 @@ textarea {
 
 .fa {
 	margin-right: 10px;
+}
+
+.hiring-banner {
+  text-align: center
 }
 
 #team {
