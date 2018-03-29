@@ -256,6 +256,33 @@ header {
 	}
 }
 
+// Temporary temp-banner
+.temp-banner {
+  margin: 0;
+  background-color: black;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  z-index: 9999;
+  text-align: center;
+  color: white;
+
+  @include for-tablet-portrait-up{
+    margin-left: -20px !important;
+    padding-top: 10px;
+
+  }
+  p {
+  @include for-phone-only {
+      padding-left: 12px;
+      line-height: normal !important;
+      font-size: 1.5em !important;
+    }
+  }
+}
+
+
 footer {
   clear: both;
 	margin-top: 70px;
@@ -570,7 +597,7 @@ a.button {
 		min-width: 0;
 		margin: 0;
 		margin-bottom: 10px;
-    font-size: 1.5em; 
+    font-size: 1.5em;
 	}
 }
 
