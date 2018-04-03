@@ -21,8 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://holochain.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: holochain
 github_username:  holochain
-logo: /assets/images/logo.png
-image: /assets/images/logo.png
+logo: /assets/images/holochain_logo.png
 
 # Social Media Links
 social:
