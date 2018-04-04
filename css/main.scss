@@ -21,6 +21,10 @@ $base-hue: 150;
   // To eleminate floating menu that breaks below the header
   @media (min-width: 769px) and (max-width: 901px) { @content; }
 }
+@mixin for-temp-banner {
+  // To eleminate margin in banner
+  @media (min-width: 600px) and (max-width: 770px) { @content; }
+}
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) { @content; }
 }
@@ -260,7 +264,7 @@ header {
 .temp-banner {
   margin: 0;
   background-color: black;
-  height: 40px;
+  height: 140px;
   width: 100%;
   position: fixed;
   top: 70px;
@@ -268,10 +272,14 @@ header {
   text-align: center;
   color: white;
 
+
   @include for-tablet-portrait-up{
     margin-left: -20px !important;
     padding-top: 10px;
 
+  }
+  @include for-temp-banner {
+    margin:0 !important;
   }
   p {
   @include for-phone-only {
@@ -282,6 +290,16 @@ header {
   }
 }
 
+.temp-banner p {
+  margin-top: 40px !important;
+  font-size: 2em !important;
+  color: #31bfb8 !important;
+}
+
+.temp-banner a {
+  text-decoration: underline !important;
+  text-decoration-color: #31bfb8 !important;
+}
 
 footer {
   clear: both;
