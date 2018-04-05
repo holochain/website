@@ -9,6 +9,9 @@ published: true
   {% assign counter = 0 %}
   {% assign sections = site.sections | sort: "order" %}
   {% for section in sections  %}
+    {% if section.order == 2%}
+      {% include matt-interview.html %}
+    {% endif %}
     <div class="curve-mask
     {% if section.appearance == 'curved' %}
       {% if forloop.last %}

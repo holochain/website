@@ -469,8 +469,8 @@ $icons: url('/assets/images/list_icon_1.png'),
 }
 
 .gradient-box {
-	width: 50%;
-	max-width: 50%;
+  width: 60%;
+	max-width: 75%;
 	margin: auto;
 	background: -webkit-linear-gradient(left top, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
     background: -o-linear-gradient(bottom right, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
@@ -569,6 +569,8 @@ $icons: url('/assets/images/list_icon_1.png'),
 .curve-content {
   width: 100%;
   margin: auto;
+  padding-top: 110px; // for temp-banner fix
+
 }
 
 a.button {
@@ -580,7 +582,7 @@ a.button {
     padding-left: 20px;
     padding-right: 20px;
     min-width: 300px;
-    margin: 7.5px;
+    //margin: 7.5px;
     font-weight: normal;
     letter-spacing: 2px;
     background: -webkit-linear-gradient(left top, rgba(102,51,255,0.9), rgba(153,0,255,0.9));
