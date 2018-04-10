@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="curve-mask light team-curve-mask">
+
+  <div class="curve-down dark">
+    <div class="curve-content-wrap team-curve-content-wrap">
+      <div class="curve-content">
+	<div>
+	  <h1 class="text-center">Events</h1>
+	  <p class="text-center"></p>
+	</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="curve-mask light">
+<div class=" light" id="curve-2" style="background: url('/assets/images/holochain/whitepaper_section_backdrop.jpg');  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+  <section class="curve-content-wrap" style="width: 100%;">
+    <div class="curve-content text-center" style="max-width:80%;padding-top:0!important;">
+
+      <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23E5E9FB&amp;src=calabs.org_ia75oas80kgce1fmjg1mm4rvs0%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </section>
+</div>
+</div>
+
+
+
+<!--[if IE 9]>
+  <script src="/assets/js/media-match.min.js"></script>
+<![endif]-->
+<script src="/assets/js/enquire.min.js"></script>
+<script src="/assets/js/savvior.min.js"></script>
+<script>
+  $('header').show();
+  savvior.init('#team', {
+     "screen and (max-width: 20em)": { columns: 2 },
+     "screen and (min-width: 20em) and (max-width: 40em)": { columns: 3 },
+     "screen and (min-width: 40em)": { columns: 4 },
+ });
+ $("#team").show();
+</script>
