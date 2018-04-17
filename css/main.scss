@@ -1080,6 +1080,7 @@ transition: all 0.4s ease 0s;
   .mobile-menu .lines {
     position: absolute;
     top: 10px !important;
+    right: 10px;
     border-bottom: 15px double #000;
     border-top: 5px solid #000;
     content:"";
