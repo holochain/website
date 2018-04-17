@@ -18,7 +18,7 @@ $base-hue: 150;
   @media (min-width: 1140px) { @content; }
 }
 @mixin for-regular-menu {
-  @media (min-width: 900px) and @media (max-width: 1140px) { @content; }
+  @media (min-width: 900px) and (max-width: 1140px) { @content; }
 }
 @mixin for-phone-landscape-only {
   @media (min-width: 320px) and (max-width: 599px) { @content; }
