@@ -10,6 +10,7 @@ published: true
   {% assign sections = site.sections | sort: "order" %}
   {% for section in sections  %}
     {% if section.order == 2%}
+      <div id="pageTop"></div>
       {% include matt-interview.html %}
     {% endif %}
     <div class="curve-mask
@@ -76,7 +77,9 @@ published: true
 		    <p class="text-center"> <img src="{{section.image.url}}" class="img-responsive"></p>
 		    <p class="text-center">{{ section.body }}</p>
 		    <div class="bounce-wrap">
-		      <img src="{{ '/assets/images/arrow.png' | theme_image_url }}" class="bounce" />
+		      <a href="#pageTop"">
+          <img src="{{ '/assets/images/arrow.png' | theme_image_url }}" class="bounce" />
+          </a>
 		    </div>
                     <!--
 		    <div class="wrap">
