@@ -17,6 +17,9 @@ $base-hue: 150;
 @mixin for-phone-menu {
   @media (min-width: 1140px) { @content; }
 }
+@mixin for-regular-menu {
+  @media (min-width: 900px) and @media (max-width: 1140px) { @content; }
+}
 @mixin for-phone-landscape-only {
   @media (min-width: 320px) and (max-width: 599px) { @content; }
 }
@@ -59,6 +62,9 @@ $base-hue: 150;
 	}
     @include for-weird-breakpoint{
     display:none;
+  }
+  @include for-regular-menu {
+    display:none!important;
   }
 }
 .mobile-menu {
