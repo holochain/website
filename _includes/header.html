@@ -1,8 +1,23 @@
 <header>
   <div class="container">
-    <p><a href="/"><img class="fadelogo header-logo" src="{{ '/assets/images/Holochain_header-logo.png' | theme_image_url }}" height="50" alt="Holochain Logo" /></a><span class="text-right no-mobile"><a href="https://github.com/holochain/holochain-proto">GitHub</a> <a target="_blank" href="https://github.com/holochain/holochain-proto/blob/whitepaper/holochain.pdf">White Paper</a> <a target="_blank" href="https://developer.holochain.org/">Get Started</a> <a target="_blank" href="https://t.me/channelholo">Chat</a>  <a href="/team.html">Team</a></span></p>
+    <nav class="mobile-menu">
+    <label for="show-menu" class="show-menu"><a href="/"><img class="fadelogo header-logo" src="{{ '/assets/images/Holochain_header-logo.png' | theme_image_url }}" height="50" alt="Holochain Logo" /></a><div class="lines"></div></label>
+      <input type="checkbox" id="show-menu">
+        <ul id="menu">
+        <li><a target="_blank" href="https://github.com/holochain/holochain-proto">GitHub</a></li>
+        <li><a target="_blank" href="https://github.com/holochain/holochain-proto/blob/whitepaper/holochain.pdf">White Paper</a></li>
+        <li><a target="_blank" href="https://developer.holochain.org/">Get Started</a> </li>
+        <li><a target="_blank" href="https://t.me/channelholo">Chat</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/events.html">Events</a></li>
+      </ul>
+    </nav>
+    <p class="no-mobile"><a href="/"><img class="fadelogo header-logo" src="{{ '/assets/images/Holochain_header-logo.png' | theme_image_url }}" height="50" alt="Holochain Logo" /></a><span class="text-right no-mobile"><a target="_blank" href="https://github.com/holochain/holochain-proto">GitHub</a> <a target="_blank" href="https://github.com/holochain/holochain-proto/blob/whitepaper/holochain.pdf">White Paper</a> <a target="_blank" href="https://developer.holochain.org/">Get Started</a> <a target="_blank" href="https://t.me/channelholo">Chat</a>  <a href="/team.html">Team</a><a href="/events.html">Events</a></span>
+    </p>
   </div>
+
   <div class="temp-banner">
     <p>Help fund Holochain’s flagship app, <a href="http://ico.holo.host/" target="blank">join the Holo ICO!</a></p>
   </div>
+
 </header>
