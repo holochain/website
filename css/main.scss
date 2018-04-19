@@ -832,6 +832,7 @@ textarea {
 // Image handling
 .first-image, .second-image, .third-image, .fourth-image {
   max-width: 200px;
+  padding-top: 60px;
   @include for-tablet-landscape-only {
     display: block;
   }
