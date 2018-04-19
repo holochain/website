@@ -14,6 +14,9 @@ $base-hue: 150;
 //   @media (max-width: 599px) { @content; }
   @media (max-width: 768px) { @content; }
 }
+@mixin for-beyond-phone {
+  @media (min-width: 768px) { @content; }
+}
 @mixin for-phone-menu {
   @media (min-width: 1140px) { @content; }
 }
@@ -25,7 +28,7 @@ $base-hue: 150;
 }
 @mixin for-weird-breakpoint {
   // To eleminate floating menu that breaks below the header
-  @media (min-width: 769px) and (max-width: 899px) { @content; }
+  @media (min-width: 769px) and (max-width: 1200px) { @content; }
 }
 @mixin for-temp-banner {
   // To eleminate margin in banner
@@ -60,9 +63,6 @@ $base-hue: 150;
 		@include for-phone-only {
 		display:none;
 	}
-    @include for-weird-breakpoint{
-    display:none;
-  }
   @include for-regular-menu {
     display:none!important;
   }
@@ -100,7 +100,7 @@ $base-hue: 150;
   font-style: normal;
 }
 
-body {
+body{
   margin: 0;
 }
 
@@ -176,6 +176,16 @@ a {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+}
+
+blockquote {
+  margin: 0px;
+  background-color: #eee;
+  width: 50%;
+  padding-left:25%;
+}
+.testimonial {
+  background-color: #eee;display:inline;
 }
 
 iframe {
@@ -518,7 +528,7 @@ $icons: url('/assets/images/list_icon_1.png'),
 }
 
 /* Resource Section */
-#curve-7 {
+#curve-8 {
   margin: -200px auto 0 auto !important;
   max-width: 1000px;
   padding: 10px;
@@ -604,6 +614,14 @@ $icons: url('/assets/images/list_icon_1.png'),
   margin: auto;
   padding-top: 110px; // for temp-banner fix
 
+}
+
+// Remove specfic padding-box
+.remove-padding {
+    padding-top: 0px !important;
+}
+section.curve-content-wrap.remove-padding  {
+  min-height: 70vh!important;
 }
 
 a.button {
@@ -777,19 +795,19 @@ textarea {
 
 }
 
-#curve-8 .curve-content-wrap, #curve-9 .curve-content-wrap {
+#curve-9 .curve-content-wrap, #curve-10 .curve-content-wrap {
 	min-height: 20vh !important;
 	height: auto;
 }
 
-#curve-8 .curve-content-wrap {
+#curve-9 .curve-content-wrap {
 		padding-top: 50px;
 		@include for-phone-only {
 		padding-top: 10px;
 	}
 }
 
-#curve-8 .sixty-forty-wrap div, #curve-9 .sixty-forty-wrap div {
+#curve-9 .sixty-forty-wrap div, #curve-10 .sixty-forty-wrap div {
 @include for-phone-only {
 	min-height: 20vh;
 	}
@@ -810,6 +828,41 @@ textarea {
 	-moz-animation: HoloLogoFade $time linear infinite;
 	animation: HoloLogoFade $time linear infinite;
 }
+
+// Image handling
+.first-image, .second-image, .third-image, .fourth-image {
+  max-width: 200px;
+  @include for-tablet-landscape-only {
+    display: block;
+  }
+  @include for-weird-breakpoint {
+    max-width: 150px;
+  }
+}
+.first-image {
+  @include for-beyond-phone{
+    padding: 15px 0 0 30px;
+  }
+}
+.second-image {
+  @include for-beyond-phone{
+    padding: 20px 20px 0px 80px;
+  }
+}
+.third-image{
+  @include for-beyond-phone{
+    width: 150px;
+    padding: 0px 10px 0px 80px;
+
+  }
+}
+.fourth-image{
+  @include for-beyond-phone{
+    width: 100px;
+    padding: 0px 0px 0px 60px;
+  }
+}
+
 
 .three-col {
 	@include for-phone-only {

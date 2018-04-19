@@ -25,8 +25,8 @@ published: true
         {{ section.colour_scheme }}
     {% endif %}">
       <div class="{% if section.appearance == 'curved' %}curve-down{% endif %} {{ section.colour_scheme }}" id="curve-{{ counter }}" {% if section.has_image == true %}style="background: url('{{ section.image.url }}'); {% unless section.appearance == 'curved' %} -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; {% else %} background-repeat: no-repeat; background-position: center 10%;{% endunless %}" {% endif %}>
-	<section class="{% if section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %}sixty-forty-wrap{% else %}curve-content-wrap{% endif %}">
-	  <div class="curve-content">
+	<section class="{% if section.appearance == 'sixty-forty' or section.appearance == 'forty-sixty' %}sixty-forty-wrap{% else %}curve-content-wrap {{section.remove_padding}}{% endif %}">
+	  <div class="curve-content {{section.remove_padding}}">
 	    {% if section.content_blocks.size > 0 %}
 	      {% capture column_count %}{{ 100 | divided_by: section.content_blocks.size }}{% endcapture %}
 	    {% else %}
@@ -47,7 +47,11 @@ published: true
 		<div class="column-content text-{{ content_block.text_align }}{% if content_block.content_layout == 'Text over Image' %} text-over-image {% endif %}"{% if content_block.content_layout == 'Image Fill' or content_block.content_layout == 'Text over Image' %} style="background: url('{{ content_block.image.url }}');{% endif %}{% if content_block.content_layout == 'Image Fill' %} -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; {% else %} background-repeat: no-repeat; background-position: center;{% endif %}">
 		  {% if content_block.has_image == true and content_block.content_layout == 'Standard' %}
 		    {% if section.content_blocks.size > 2 %}
-		      <img class="fadeimg three-col" src="{{ content_block.image.url }}" />
+          {% if content_block.has_link == true %}
+		        <a target="_blank" href="{{content_block.image_link}}" title="{{content_block.title}}"><img class="{{content_block.extra_image_class}}" src="{{ content_block.image.url }}" /></a>
+          {% else %}
+            <img class="fadeimg three-col {{content_block.extra_image_class}}" src="{{ content_block.image.url }}" />
+          {% endif %}
 		    {% else %}
                       <img class="img-responsive" src="{{ content_block.image.url }}" />
 		    {% endif %}
