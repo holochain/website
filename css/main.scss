@@ -28,7 +28,10 @@ $base-hue: 150;
 }
 @mixin for-weird-breakpoint {
   // To eleminate floating menu that breaks below the header
-  @media (min-width: 769px) and (max-width: 1200px) { @content; }
+  @media (min-width: 768px) and (max-width: 1200px) { @content; }
+}
+@mixin for-main-nav {
+  @media (min-width: 768px) and (max-width: 900px) { @content; }
 }
 @mixin for-temp-banner {
   // To eleminate margin in banner
@@ -69,6 +72,11 @@ $base-hue: 150;
 }
 .mobile-menu {
   @include for-phone-menu {
+    display:none!important;
+  }
+}
+.main-nav {
+  @include for-main-nav {
     display:none!important;
   }
 }
@@ -179,13 +187,16 @@ a {
 }
 
 blockquote {
-  margin: 0px;
+  margin: 0px auto;
   background-color: #eee;
-  width: 50%;
-  padding-left:25%;
+  max-width: 512px;
+  font-size: 1.2em;
+  text-align: left;
+
 }
-.testimonial {
-  background-color: #eee;display:inline;
+
+.column-testimonials iframe {
+  border: solid 3px #000;
 }
 
 iframe {
@@ -224,6 +235,16 @@ li {
     @include for-phone-only {
     	font-size: 12px;
     	}
+}
+
+ol li {
+  list-style-type: upper-roman;
+  background-image: none!important;
+}
+
+.table-of-contents {
+  text-align: left!important;
+  padding-bottom: 50px;
 }
 
 header {
@@ -528,7 +549,7 @@ $icons: url('/assets/images/list_icon_1.png'),
 }
 
 /* Resource Section */
-#curve-8 {
+#curve-9 {
   margin: -200px auto 0 auto !important;
   max-width: 1000px;
   padding: 10px;
@@ -795,19 +816,19 @@ textarea {
 
 }
 
-#curve-9 .curve-content-wrap, #curve-10 .curve-content-wrap {
+#curve-10 .curve-content-wrap, #curve-11 .curve-content-wrap {
 	min-height: 20vh !important;
 	height: auto;
 }
 
-#curve-9 .curve-content-wrap {
+#curve-10 .curve-content-wrap {
 		padding-top: 50px;
 		@include for-phone-only {
 		padding-top: 10px;
 	}
 }
 
-#curve-9 .sixty-forty-wrap div, #curve-10 .sixty-forty-wrap div {
+#curve-10 .sixty-forty-wrap div, #curve-11 .sixty-forty-wrap div {
 @include for-phone-only {
 	min-height: 20vh;
 	}
