@@ -189,16 +189,24 @@ a {
 blockquote {
   margin: 0px auto;
   background-color: #eee;
-  max-width: 512px;
+  max-width: 480px;
   font-size: 1.2em;
   text-align: left;
+  padding: 0 10px;
 
 }
 
 .column-testimonials iframe {
   border: solid 3px #000;
+  max-width: 100%;
 }
 
+.column-testimonials{
+  @include for-weird-breakpoint {
+    clear: both;
+    width: 100%!important;
+  }
+}
 iframe {
 	margin-top: 20px;
   max-width: 100%;
