@@ -43,8 +43,11 @@ plugins:
 collections:
   sections:
   team_members:
+  apps:
+    permalink: /app/:path
+    output: true
   events:
-      output: true
+    output: true
 
 
 # Exclude from processing.
