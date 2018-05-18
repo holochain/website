@@ -1,13 +1,28 @@
 ---
 layout: default
 ---
-<div class="app">
-  <h1>{{page.name}}</h1>
-  <h4><a href="{{page.repo}}">{{page.repo}}</a><h4>
-    <h4>  {{page.dev-phase}}</h4>
-    <div class="app-summary"">{{page.summary}}</div>
-    {{page.thumbnail}}
-    {{page.noteworthy-features}}
-    {{page.website}}
-    <div class="app-content"">{{page.content}}</div>
+<div class="curve-mask light team-curve-mask">
+
+  <div class="curve-down dark">
+    <div class="curve-content-wrap team-curve-content-wrap">
+      <div class="curve-content">
+	<div>
+	  <h1 class="text-center">{{page.name}}</h1>
+	</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="app">
+      <h4>Repo: <a href="{{page.repo}}" target="_blank">{{page.repo}}</a></h4>
+          <h4>Development Phase:  {{page.dev-phase}}</h4>
+          <hr>
+          <div class="app-summary""><p>Summary: {{page.summary}}</p></div>
+          <p>{{page.thumbnail}}</p>
+          <p>Noteworthy features:{{page.noteworthy-features}}</p>
+          <p>{{page.website}}</p>
+          <div class="app-content"><p>Details: {{page.content}}</p></div>
+  </div>
 </div>
