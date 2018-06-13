@@ -1,18 +1,16 @@
 ---
 layout: default
-title: "Holochain: Team"
-image: /assets/images/team/grid.png
 ---
-
 <div class="curve-mask light team-curve-mask">
 
   <div class="curve-down dark">
     <div class="curve-content-wrap team-curve-content-wrap">
       <div class="curve-content">
-	<div class="team-intro" style="padding-top:75px;padding-bottom:40px">
-	  <h1 class="text-center">Team</h1>
-	  <p class="text-center">We are a community of passionate humans building a distributed generalized compute platform.</p>
-	  <p class="text-center">As an open source project, Holochain is built by the collaborative work of many people in ways both large and small. However, in its current nascent phase, most of the support comes from  <a href="https://holo.host">Holo</a>, a company building out the first large-scale use of Holochain: a network for distributed hosting of Holochain applications.  Here is our team.</p>
+	<div class="team-intro">
+	  <h1 class="text-center">Dev Team</h1>
+    <p class="text-center">We are a community of passionate humans building a distributed generalized compute platform.</p>
+	  <p class="text-center">As an open source project, Holochain is built by the collaborative work of many people in ways both large and small. However, in its current nascent phase, most of the support comes from  <a href="https://holo.host">Holo</a>, a company building out the first large-scale use of Holochain: a network for distributed hosting of Holochain applications.</p>
+	  <p class="text-center"></p>
 	</div>
       </div>
     </div>
@@ -20,29 +18,62 @@ image: /assets/images/team/grid.png
 
 </div>
 
+<div class="curve-mask light">
+<div class=" light" id="curve-2" style="background: url('/assets/images/holochain/whitepaper_section_backdrop.jpg');  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+  <section class="curve-content-wrap">
+    <div class="curve-content">
+      <h2>We're Hiring</h2>
+      <h3>If you're an experienced coder steeped in distibuted computing, we may be interested in you.</h3>
+      <h3>What we're looking for:</h3>
+      <ul>
+        <li>Holochain Core: Go, Rust, JavaScript, DHT communications</li>
+        <li>Core Apps: JavaScript, DPKI, Holochain</li>
+        <li>HoloPorts: OS optimization, Remote Administration, Moble App Access, Containerization</li>
+        <li>Front-end: CSS, HTML, page layout, single-page applications, React, React-Native</li>
+        <li>DevOps: System Administration, Security, Docker, Ansible, Chef, Kubernetes, etc.</li>
+        <li>Technical writing: developer documentation, training materials, blog posts, white papers</li>
+      </ul>
+      <h3>Who we're looking for:</h3>
+      <ul>
+        <li>You love coding, building awesome things, and are excited about building a large disruptive platform.</li>
+        <li>You can be reliably productive working on your own and in remote collaboration with a team.</li>
+        <li>You are proficient with: git & test-driven development</li>
+        <li>You are comfortable with: Agile coding, scrum, pair-coding, Kanban boards, etc.</li>
+        <li>You are comfortable providing and receiving direct feedback. </li>
+      </ul>
+
+      <h3> If this sounds like fun, and you're ready to dive into the intensity of a fast-moving startup, <a class="text-left footer-link" href="https://holochain.typeform.com/to/oW5u7X?source=holochainsite" target="blank"><strong>apply to join our team</strong></a>!</h3>
+      <h3> Just want to explore? Join the conversation on our <a href="https://chat.holochain.org/">chat server</a>, or <a href="https://t.me/channelholo" target="blank">on Telegram</a>.</h3>
+
+    </div>
+  </section>
+</div>
+</div>
 
 <div class="hiring-banner">
-  <h2>We are hiring for our <a href="/devteam.html">Dev Team</a></h2>
+  <h2>Current Team</h2>
 </div>
 
-
-<div  id="team" class="container team-container" style="display:none">
-    {% assign members = site.team_members | sort: "order" %}
-    {% for team_member in members %}
+<div id="team" class="container team-container" style="display:none">
+  {% assign members = site.team_members | sort: "order" %}
+  {% for team_member in members %}
+    {% if team_member.dev %}
       <div class="grid-item">
-	  <p class="text-center"><img class="team-image text-center" src="{{ team_member.photo.url }}"/></p>
-	  <h3 class="text-center">{{ team_member.name }}</h3>
-	  <p class="text-center">{{ team_member.job_title }}</p>
+	<p class="text-center"><img class="team-image text-center" src="{{ team_member.photo.url }}"/></p>
+	<h3 class="text-center">{{ team_member.name }}</h4>
+	  <p class="text-center">{{ team_member.dev }}</p>
 
-	    <p>
-              {% if team_member.linkedin  %}<a href="{{ team_member.linkedin }}"><i class="fa fa-linkedin"></i></a>{% endif %}
-              {% if team_member.twitter  %}<a href="https://twitter.com/{{ team_member.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
-              {% if team_member.facebook  %}<a href="{{ team_member.facebook }}"><i class="fa fa-facebook"></i></a>{% endif %}
-            </p>
+	  <p>
+            {% if team_member.linkedin  %}<a href="{{ team_member.linkedin }}"><i class="fa fa-linkedin"></i></a>{% endif %}
+            {% if team_member.twitter  %}<a href="https://twitter.com/{{ team_member.twitter }}"><i class="fa fa-twitter"></i></a>{% endif %}
+            {% if team_member.facebook  %}<a href="{{ team_member.facebook }}"><i class="fa fa-facebook"></i></a>{% endif %}
+          </p>
 
       </div>
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
 </div>
+
 
 <!--[if IE 9]>
   <script src="/assets/js/media-match.min.js"></script>
@@ -50,8 +81,8 @@ image: /assets/images/team/grid.png
 <script src="/assets/js/enquire.min.js"></script>
 <script src="/assets/js/savvior.min.js"></script>
 <script>
- $('header').show();
- savvior.init('#team', {
+  $('header').show();
+  savvior.init('#team', {
      "screen and (max-width: 20em)": { columns: 2 },
      "screen and (min-width: 20em) and (max-width: 40em)": { columns: 3 },
      "screen and (min-width: 40em)": { columns: 4 },

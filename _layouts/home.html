@@ -81,7 +81,7 @@ published: true
 		    <p class="text-center"> <img src="{{section.image.url}}" class="img-responsive"></p>
 		    <p class="text-center">{{ section.body }}</p>
 		    <div class="bounce-wrap">
-		      <a href="#pageTop"">
+		      <a href="#pageTop">
           <img src="{{ '/assets/images/arrow.png' | theme_image_url }}" class="bounce" />
           </a>
 		    </div>
@@ -114,6 +114,7 @@ published: true
 	  <div class="column-hackathon column">
 	    <div class="hackathon-content">
 	      <h3 class="text-center">Upcoming Hackathons</h3>
+          <h3 class="text-center"> <a href="#curve-hackathon">Stay Tuned!</a> </h3>
           {% assign events = site.events | sort: "sort-date" %}
 	      {% for event in events %}
 		<p class="text-center"><a class="button button-hackathon" href="{{ event.url }}">{{ event.location }}, {{ event.date_txt }}</a></button></p>
