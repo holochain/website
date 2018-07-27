@@ -558,9 +558,13 @@ $icons: url('/assets/images/list_icon_1.png'),
 
 /* Resource Section */
 #curve-9 {
-  margin: -200px auto 0 auto !important;
+
   max-width: 1000px;
   padding: 10px;
+  @include for-desktop-up{
+    margin: -200px auto 0 auto !important;
+  }
+
 }
 
 /* Curves */
