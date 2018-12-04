@@ -557,6 +557,13 @@ $icons: url('/assets/images/list_icon_1.png'),
 }
 
 /* Resource Section */
+
+.column-resources
+{
+  @include for-desktop-up{
+    margin-top: 20%;
+  }
+}
 #curve-9 {
 
   max-width: 1000px;
