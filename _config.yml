@@ -41,6 +41,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
+permalink: pretty
 collections:
   sections:
   team_members:
