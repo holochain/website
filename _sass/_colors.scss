@@ -1,0 +1,33 @@
+/**
+ * Brand Colors
+ */
+$purple: #6600ff;
+$magenta: #9900ff;
+$teal: #00ff99;
+$blue: rgb(61, 101, 214);
+
+/**
+ * Generic Colors
+ */
+$black: #000;
+$white: #fff;
+$dark: #333;
+$light: #f9f9f9;
+
+/**
+ * Gradients
+ */
+
+$background-gradient: linear-gradient(135deg, $purple 20%, $blue 50%, $teal 110%);
+
+%gradient {
+  background-image: $background-gradient;
+  background-size: contain;
+}
+
+%gradient-text {
+  @extend %gradient;
+  color: $purple;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

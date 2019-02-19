@@ -1,0 +1,79 @@
+/**
+ * Helpers/Utilitity Classes & Mixins
+ */
+
+.mobile-only {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include breakpoint(tablet-below) {
+    display: none;
+  }
+}
+
+.tablet-below {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+@mixin pseudo-block {
+  content: '';
+  display: block;
+}
+
+@mixin after {
+  &:after {
+    @include pseudo-block;
+    @content;
+  }
+}
+
+@mixin before {
+  &:before {
+    @include pseudo-block;
+    @content;
+  }
+}
+
+/**
+ * Set Aspect Ratio
+ * https://css-tricks.com/aspect-ratio-boxes/
+ */
+@mixin aspect-ratio($width, $height) {
+  @include before {
+    padding-top: ($height / $width) * 100%;
+  }
+
+  @include after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Responsive Image Component
+ */
+@mixin responsive-image {
+  width: 100%;
+  height: 100%;
+  background-color: $light;
+  position: relative;
+  z-index: 0;
+
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  @content;
+}

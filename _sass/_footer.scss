@@ -1,0 +1,43 @@
+/**
+ * Footer Styles
+ */
+
+footer {
+  @include container;
+  background: $black;
+  color: $white;
+
+  .container {
+    @include grid;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul.social-links {
+      display: flex;
+
+      > li {
+        margin: 0 8px;
+        font-size: 14px;
+        
+        a {
+          display: inline-block;
+          color: $white;
+          transition: all 0.25 ease;
+
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
+      }
+    }
+  }
+}
