@@ -1,7 +1,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.path contains 'activity' %}
+  <meta name="viewport" content="width=1024, initial-scale=1">
+  {% else %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% endif %}
   {% seo %}
   <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
