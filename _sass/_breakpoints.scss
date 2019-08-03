@@ -1,0 +1,105 @@
+/**
+ * Breakpoint Sass Mixin
+ *
+ * Usage:
+ * .class-name {
+ *    // Styles For Mobile Breakpoint Only
+ *    @include breakpoint(mobile) {
+ *      font-size: 12px;
+ *    }
+ * }
+ */
+
+$breakpoints: (
+  mobile: 768px, // Mobile max-width
+  tablet: 1023px, // Tablet max-width
+  desktop: 1024px // Desktop min-width
+) !default;
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (max-width: map-get($breakpoints, mobile)) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)), (max-width: map-get($breakpoints, mobile)) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point == tablet-below {
+    @media (max-width: map-get($breakpoints, tablet)), (max-width: map-get($breakpoints, mobile)) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point == tablet-above {
+    @media (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)), (min-width: map-get($breakpoints, tablet)), (max-width: map-get($breakpoints, mobile)) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Old Grid Below
+ */
+
+$total: 300; // total particles
+$orb-size: 300px;
+$particle-size: 4px;
+$time: 30s; // for css effects
+$base-hue: 150;
+
+//breakpoints
+
+@mixin for-phone-only {
+//   @media (max-width: 599px) { @content; }
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-beyond-phone {
+  @media (min-width: 768px) { @content; }
+}
+@mixin for-phone-menu {
+  @media (min-width: 1140px) { @content; }
+}
+@mixin for-regular-menu {
+  @media (min-width: 900px) and (max-width: 1140px) { @content; }
+}
+@mixin for-phone-landscape-only {
+  @media (min-width: 320px) and (max-width: 599px) { @content; }
+}
+@mixin for-weird-breakpoint {
+  // To eleminate floating menu that breaks below the header
+  @media (min-width: 768px) and (max-width: 1200px) { @content; }
+}
+@mixin for-main-nav {
+  @media (min-width: 768px) and (max-width: 900px) { @content; }
+}
+@mixin for-temp-banner {
+  // To eleminate margin in banner
+  @media (min-width: 600px) and (max-width: 770px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-most-desktops {
+  @media (min-width: 1200px) and (max-width: 1899px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1900px) { @content; }
+}

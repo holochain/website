@@ -1,0 +1,101 @@
+/**
+ * Form Elements Styles
+ */
+
+form {
+  display: block;
+}
+
+fieldset {
+  margin: 0 0 35px 0;
+  padding: 0;
+  border: none;
+}
+
+label {
+  @extend %p;
+  font-weight: 300;
+}
+
+span.error {
+  @extend %p;
+  display: inline-block;
+  padding: 5px 0;
+  color: red;
+  font-size: 12px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $purple;
+  outline: none;
+  font-family: font(default);
+  font-size: 16px;
+
+  &::placeholder {
+    font-size: 13px;
+  }
+
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $purple;
+  outline: none;
+  font-family: font(default);
+  font-size: 16px;
+
+  &::placeholder {
+    font-size: 13px;
+  }
+
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+fieldset {
+  position: relative;
+
+  span.error {
+    position: absolute;
+    transform: translateX(10px);
+    opacity: 0;
+    transition: all 0.15s ease;
+    left: 0;
+    top: 100%;
+  }
+
+  &.error {
+    input[type='text'] {
+      border-color: red;
+    }
+
+    span.error {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/**
+ * Hyperform related styles
+ * https://hyperform.js.org/
+ */
+
+div.hf-warning {
+  display: none;
+}

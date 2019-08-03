@@ -1,0 +1,108 @@
+/**
+ * Fonts
+ */
+
+@font-face {
+  font-family: 'AvenirUltraLight';
+  src: url('/assets/fonts/avenir/AvenirNext-UltraLight.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('/assets/fonts/avenir/Avenir-Light.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/assets/fonts/avenir/Avenir-Roman.woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirMedium';
+  src: url('/assets/fonts/avenir/Avenir-Medium.woff');
+  font-style: normal;
+}
+
+/**
+ * Custom Fonts Sass function
+ *
+ * Usage:
+ *
+ * .class-name {
+ *    font-family: font(primary);
+ * }
+ */
+$avenir: 'Avenir', Helvetica, Arial, sans-serif;
+$avenir-light: 'AvenirLight', Helvetica, Arial, sans-serif;
+$helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$fonts: (
+  primary: $avenir,
+  secondary: $avenir-light,
+  default: $helvetica-neue
+) !default;
+
+@function font($name: primary, $fonts: $fonts) {
+  @return map-get($fonts, $name);
+}
+
+/**
+ * Font Smoothing
+ */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Typography
+ */
+
+%p {
+  font-family: font(default);
+  line-height: 1.9;
+  font-size: 15px;
+
+  @include breakpoint(tablet) {
+    font-size: 15px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 16px;
+  }
+}
+
+%h1 {
+  font-family: font(primary);
+  font-weight: bold;
+  line-height: 1.14;
+  font-size: 34px;
+
+  @include breakpoint(desktop) {
+    font-size: 70px;
+  }
+}
+
+%h2 {
+  font-family: font(secondary);
+  font-weight: bold;
+  line-height: 1.14;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+
+  @include breakpoint(desktop) {
+    font-size: 40px;
+  }
+}
+
+%h3 {
+  font-family: font(secondary);
+  font-weight: bold;
+  line-height: 1.35;
+  font-size: 24px;
+}

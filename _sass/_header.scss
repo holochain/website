@@ -1,0 +1,150 @@
+/**
+ * Headroom.js Styles
+ */
+.headroom {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.2s ease;
+  will-change: transform;
+
+  &--unpinned {
+    transition-duration: 0.4s;
+    transform: translateY(-100%);
+  }
+
+  &--pinned:not(.headroom--top) {
+    transform: translateY(0);
+    box-shadow: 0 0 15px 0 rgba(black, 0.13);
+  }
+}
+
+/**
+ * Main Header Styles
+ */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+  }
+
+  // Logo
+  img {
+    height: 30px;
+
+    @include for-phone-only {
+      height: 25px;
+    }
+  }
+
+  .container {
+    height: 100%;
+    margin: 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav-menu {
+    a {
+      margin: 0 15px;
+      color: $dark;
+      background: none;
+      -webkit-text-fill-color: unset;
+      font-weight: normal;
+      letter-spacing: 1px;
+      font-size: 15px;
+      transition: all 0.25s ease;
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        background: $blue;
+        transition: all 0.25s ease;
+      }
+
+      &:hover {
+        color: $blue;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include for-phone-only {
+    padding-left: 0px;
+  }
+
+  @include for-phone-landscape-only {
+    padding-left: 0px;
+    height: auto;
+    min-height: 80px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header img {
+    height: auto;
+    max-width: 100%;
+    height: 40px;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .mobile-menu .lines {
+    position: absolute;
+    top: 10px !important;
+    right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  header img {
+    margin-top: 40px;
+  }
+}
+
+.fadelogo {
+  background: linear-gradient(240deg, #6600ff, #9900ff, #9900ff, #6600ff, rgb(33, 172, 186), #0fe19f, rgb(33, 172, 186), #6600ff, #9900ff, #9900ff, #6600ff);
+  background-size: 30% 200%;
+  animation: HoloLogoFade $time linear infinite;
+}
+
+@keyframes HoloLogoFade {
+  0% {
+    background-position: 0% 0%
+  }
+
+  50% {
+    background-position: 50% 0%
+  }
+
+  100% {
+    background-position: 100% 0%
+  }
+}
